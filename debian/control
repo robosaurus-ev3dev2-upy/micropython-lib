@@ -1,0 +1,23 @@
+Source: micropython-lib
+Maintainer: David Lechner <david@lechnology.com>
+Section: python
+Priority: optional
+Build-Depends: debhelper (>= 10)
+Standards-Version: 3.9.8
+Vcs-Browser: https://github.com/ev3dev/micropython-lib
+Vcs-Git: https://github.com/ev3dev/micropython-lib.git
+Homepage: https://micropython.org
+
+Package: micropython-lib
+Architecture: any
+Depends: ${misc:Depends}, micropython
+Description: Standard libraries for MicroPython
+ micropython-lib is a project to develop a non-monolothic standard library
+ for MicroPython (https://github.com/micropython/micropython). Each module
+ or package is available as a separate distribution package from PyPI. Each
+ module is either written from scratch or ported from CPython.
+ .
+ Note that the main target of micropython-lib is a "Unix" port of MicroPython.
+ Actual system requirements vary per module. Though if a module is not related
+ to I/O, the module should work without problems on bare-metal ports too (e.g.
+ pyboard).
