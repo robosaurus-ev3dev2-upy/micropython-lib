@@ -9,7 +9,7 @@ Vcs-Git: https://github.com/ev3dev/micropython-lib.git
 Homepage: https://micropython.org
 
 Package: micropython-lib
-Architecture: any
+Architecture: all
 Depends: ${misc:Depends}, micropython
 Description: Standard libraries for MicroPython
  micropython-lib is a project to develop a non-monolothic standard library
