@@ -1,4 +1,4 @@
-PREFIX = ~/.micropython/lib
+PREFIX = $(DESTDIR)/usr/lib/micropython
 
 all:
 
