@@ -1,3 +1,9 @@
+micropython-lib (1.9ev3dev2) testing; urgency=medium
+
+  * change architecture to all
+
+ -- David Lechner <david@lechnology.com>  Fri, 18 Aug 2017 17:49:02 -0500
+
 micropython-lib (1.9ev3dev1) testing; urgency=medium
 
   * Initial release
