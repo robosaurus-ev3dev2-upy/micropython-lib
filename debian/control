@@ -2,14 +2,14 @@ Source: micropython-lib
 Maintainer: David Lechner <david@lechnology.com>
 Section: python
 Priority: optional
-Build-Depends: debhelper (>= 10)
+Build-Depends: debhelper (>= 10), mpy-cross
 Standards-Version: 3.9.8
 Vcs-Browser: https://github.com/ev3dev/micropython-lib
 Vcs-Git: https://github.com/ev3dev/micropython-lib.git
 Homepage: https://micropython.org
 
 Package: micropython-lib
-Architecture: all
+Architecture: any
 Depends: ${misc:Depends}, micropython
 Description: Standard libraries for MicroPython
  micropython-lib is a project to develop a non-monolothic standard library

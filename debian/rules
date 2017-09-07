@@ -2,5 +2,188 @@
 # -*- makefile -*-
 #export DH_VERBOSE=1
 
+# asyncio_slow/asyncio_slow.mpy is omitted because it defines async, which
+# causes a compile error.
+
+mpy_files = \
+	__future__/__future__.mpy \
+	_libc/_libc.mpy \
+	_markupbase/_markupbase.mpy \
+	abc/abc.mpy \
+	argparse/argparse.mpy \
+	base64/base64.mpy \
+	binascii/binascii.mpy \
+	binhex/binhex.mpy \
+	bisect/bisect.mpy \
+	calendar/calendar.mpy \
+	cgi/cgi.mpy \
+	cmd/cmd.mpy \
+	collections/collections/__init__.mpy \
+	collections.defaultdict/collections/defaultdict.mpy \
+	collections.deque/collections/deque.mpy \
+	concurrent.futures/concurrent/futures/__init__.mpy \
+	contextlib/contextlib.mpy \
+	copy/copy.mpy \
+	cpython-uasyncio/uasyncio.mpy \
+	csv/csv.mpy \
+	curses.ascii/curses/ascii.mpy \
+	datetime/datetime.mpy \
+	dbm/dbm.mpy \
+	decimal/decimal.mpy \
+	difflib/difflib.mpy \
+	email.charset/email/charset.mpy \
+	email.encoders/email/base64mime.mpy \
+	email.encoders/email/encoders.mpy \
+	email.encoders/email/quoprimime.mpy \
+	email.errors/email/errors.mpy \
+	email.feedparser/email/feedparser.mpy \
+	email.header/email/header.mpy \
+	email.internal/email/_encoded_words.mpy \
+	email.internal/email/_parseaddr.mpy \
+	email.internal/email/_policybase.mpy \
+	email.message/email/iterators.mpy \
+	email.message/email/message.mpy \
+	email.parser/email/parser.mpy \
+	email.utils/email/utils.mpy \
+	errno/errno.mpy \
+	fcntl/fcntl.mpy \
+	ffilib/ffilib.mpy \
+	fnmatch/fnmatch.mpy \
+	fnmatch/fnmatch.mpy \
+	formatter/formatter.mpy \
+	fractions/fractions.mpy \
+	ftplib/ftplib.mpy \
+	functools/functools.mpy \
+	getopt/getopt.mpy \
+	getpass/getpass.mpy \
+	gettext/gettext.mpy \
+	glob/glob.mpy \
+	gzip/gzip.mpy \
+	hashlib/hashlib/__init__.mpy \
+	hashlib/hashlib/sha224.mpy \
+	hashlib/hashlib/sha256.mpy \
+	hashlib/hashlib/sha384.mpy \
+	hashlib/hashlib/sha512.mpy \
+	heapq/heapq.mpy \
+	hmac/hmac.mpy \
+	html/html/__init__.mpy \
+	html.entities/html/entities.mpy \
+	html.parser/html/parser.mpy \
+	http.client/http/client.mpy \
+	imaplib/imaplib.mpy \
+	imp/imp.mpy \
+	inspect/inspect.mpy \
+	io/io.mpy \
+	ipaddress/ipaddress.mpy \
+	itertools/itertools.mpy \
+	json/json/__init__.mpy \
+	json/json/decoder.mpy \
+	json/json/encoder.mpy \
+	json/json/scanner.mpy \
+	json/json/tool.mpy \
+	keyword/keyword.mpy \
+	linecache/linecache.mpy \
+	locale/locale.mpy \
+	logging/logging.mpy \
+	machine/machine/__init__.mpy \
+	machine/machine/pin.mpy \
+	machine/machine/timer.mpy \
+	mailbox/mailbox.mpy \
+	mailcap/mailcap.mpy \
+	mimetypes/mimetypes.mpy \
+	multiprocessing/multiprocessing.mpy \
+	nntplib/nntplib.mpy \
+	numbers/numbers.mpy \
+	operator/operator.mpy \
+	optparse/optparse.mpy \
+	os/os/__init__.mpy \
+	os.path/os/path.mpy \
+	pathlib/pathlib.mpy \
+	pdb/pdb.mpy \
+	pickle/pickle.mpy \
+	pickletools/pickletools.mpy \
+	pkg_resources/pkg_resources.mpy \
+	pkgutil/pkgutil.mpy \
+	platform/platform.mpy \
+	poplib/poplib.mpy \
+	posixpath/posixpath.mpy \
+	pprint/pprint.mpy \
+	profile/profile.mpy \
+	pty/pty.mpy \
+	pyb/pyb.mpy \
+	pystone/pystone.mpy \
+	pystone_lowmem/pystone_lowmem.mpy \
+	queue/queue.mpy \
+	quopri/quopri.mpy \
+	random/random.mpy \
+	re-pcre/re.mpy \
+	reprlib/reprlib.mpy \
+	runpy/runpy.mpy \
+	sched/sched.mpy \
+	select/select.mpy \
+	selectors/selectors.mpy \
+	shelve/shelve.mpy \
+	shlex/shlex.mpy \
+	shutil/shutil.mpy \
+	signal/signal.mpy \
+	smtplib/smtplib.mpy \
+	socket/socket.mpy \
+	socketserver/socketserver.mpy \
+	sqlite3/sqlite3.mpy \
+	stat/stat.mpy \
+	statistics/statistics.mpy \
+	string/string.mpy \
+	stringprep/stringprep.mpy \
+	struct/struct.mpy \
+	subprocess/subprocess.mpy \
+	tarfile/tarfile.mpy \
+	telnetlib/telnetlib.mpy \
+	tempfile/tempfile.mpy \
+	test.pystone/test/pystone.mpy \
+	test.support/test/support.mpy \
+	textwrap/textwrap.mpy \
+	threading/threading.mpy \
+	time/time.mpy \
+	timeit/timeit.mpy \
+	trace/trace.mpy \
+	traceback/traceback.mpy \
+	tty/tty.mpy \
+	types/types.mpy \
+	uasyncio/uasyncio/__init__.mpy \
+	uasyncio.core/uasyncio/core.mpy \
+	uasyncio.queues/uasyncio/queues.mpy \
+	ucontextlib/ucontextlib.mpy \
+	ucurses/ucurses/__init__.mpy \
+	umqtt.robust/umqtt/robust.mpy \
+	umqtt.simple/umqtt/simple.mpy \
+	unicodedata/unicodedata.mpy \
+	unittest/unittest.mpy \
+	upip/upip_utarfile.mpy \
+	upip/upip.mpy \
+	upysh/upysh.mpy \
+	urequests/urequests.mpy \
+	urllib/urllib.mpy \
+	urllib/urllib.mpy \
+	urllib.parse/urllib/parse.mpy \
+	urllib.urequest/urllib/urequest.mpy \
+	utarfile/utarfile.mpy \
+	uu/uu.mpy \
+	uuid/uuid.mpy \
+	warnings/warnings.mpy \
+	weakref/weakref.mpy \
+	xmltok/xmltok.mpy \
+	zipfile/zipfile.mpy
+
 %:
 	dh $@
+
+%.mpy: %.py
+	mpy-cross -v -v -mcache-lookup-bc $<
+
+# compile .py > .mpy
+override_dh_auto_build: $(mpy_files)
+
+override_dh_auto_install:
+	for d in $(mpy_files); do \
+		install -D --mode=644 $$d debian/micropython-lib/usr/lib/micropython/$${d#*/}; \
+	done
