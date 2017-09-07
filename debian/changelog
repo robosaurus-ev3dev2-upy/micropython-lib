@@ -1,3 +1,11 @@
+micropython-lib (1.9ev3dev3) testing; urgency=medium
+
+  * Fix extra /usr/lib/micropython/micropython-lib directory in binary package
+  * Compile modules to .mpy before installing
+  * Change architecture to any
+
+ -- David Lechner <david@lechnology.com>  Thu, 07 Sep 2017 16:10:57 -0500
+
 micropython-lib (1.9ev3dev2) testing; urgency=medium
 
   * change architecture to all
