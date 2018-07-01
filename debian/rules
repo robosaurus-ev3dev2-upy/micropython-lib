@@ -11,6 +11,7 @@ mpy_files = \
 	_markupbase/_markupbase.mpy \
 	abc/abc.mpy \
 	argparse/argparse.mpy \
+	array/setup.mpy \
 	base64/base64.mpy \
 	binascii/binascii.mpy \
 	binhex/binhex.mpy \
@@ -18,9 +19,15 @@ mpy_files = \
 	calendar/calendar.mpy \
 	cgi/cgi.mpy \
 	cmd/cmd.mpy \
-	collections/collections/__init__.mpy \
+	code/code.mpy \
+	code/setup.mpy \
+	codecs/codecs.mpy \
+	codecs/setup.mpy \
+	codeop/codeop.mpy \
+	codeop/setup.mpy \
 	collections.defaultdict/collections/defaultdict.mpy \
 	collections.deque/collections/deque.mpy \
+	collections/collections/__init__.mpy \
 	concurrent.futures/concurrent/futures/__init__.mpy \
 	contextlib/contextlib.mpy \
 	copy/copy.mpy \
@@ -31,6 +38,8 @@ mpy_files = \
 	dbm/dbm.mpy \
 	decimal/decimal.mpy \
 	difflib/difflib.mpy \
+	dis/setup.mpy \
+	dummy_threading/setup.mpy \
 	email.charset/email/charset.mpy \
 	email.encoders/email/base64mime.mpy \
 	email.encoders/email/encoders.mpy \
@@ -60,18 +69,20 @@ mpy_files = \
 	glob/glob.mpy \
 	gzip/gzip.mpy \
 	hashlib/hashlib/__init__.mpy \
-	hashlib/hashlib/sha224.mpy \
-	hashlib/hashlib/sha256.mpy \
-	hashlib/hashlib/sha384.mpy \
-	hashlib/hashlib/sha512.mpy \
+	hashlib/hashlib/_sha224.mpy \
+	hashlib/hashlib/_sha256.mpy \
+	hashlib/hashlib/_sha384.mpy \
+	hashlib/hashlib/_sha512.mpy \
 	heapq/heapq.mpy \
 	hmac/hmac.mpy \
-	html/html/__init__.mpy \
 	html.entities/html/entities.mpy \
 	html.parser/html/parser.mpy \
+	html/html/__init__.mpy \
 	http.client/http/client.mpy \
 	imaplib/imaplib.mpy \
 	imp/imp.mpy \
+	importlib/importlib.mpy \
+	importlib/setup.mpy \
 	inspect/inspect.mpy \
 	io/io.mpy \
 	ipaddress/ipaddress.mpy \
@@ -90,14 +101,15 @@ mpy_files = \
 	machine/machine/timer.mpy \
 	mailbox/mailbox.mpy \
 	mailcap/mailcap.mpy \
+	math/setup.mpy \
 	mimetypes/mimetypes.mpy \
 	multiprocessing/multiprocessing.mpy \
 	nntplib/nntplib.mpy \
 	numbers/numbers.mpy \
 	operator/operator.mpy \
 	optparse/optparse.mpy \
-	os/os/__init__.mpy \
 	os.path/os/path.mpy \
+	os/os/__init__.mpy \
 	pathlib/pathlib.mpy \
 	pdb/pdb.mpy \
 	pickle/pickle.mpy \
@@ -110,16 +122,21 @@ mpy_files = \
 	pprint/pprint.mpy \
 	profile/profile.mpy \
 	pty/pty.mpy \
+	pwd/pwd.mpy \
+	pwd/setup.mpy \
 	pyb/pyb.mpy \
-	pystone/pystone.mpy \
 	pystone_lowmem/pystone_lowmem.mpy \
+	pystone/pystone.mpy \
 	queue/queue.mpy \
 	quopri/quopri.mpy \
 	random/random.mpy \
 	re-pcre/re.mpy \
+	readline/readline.mpy \
+	readline/setup.mpy \
 	reprlib/reprlib.mpy \
 	runpy/runpy.mpy \
 	sched/sched.mpy \
+	sdist_upip.mpy \
 	select/select.mpy \
 	selectors/selectors.mpy \
 	shelve/shelve.mpy \
@@ -130,12 +147,16 @@ mpy_files = \
 	socket/socket.mpy \
 	socketserver/socketserver.mpy \
 	sqlite3/sqlite3.mpy \
+	ssl/setup.mpy \
+	ssl/ssl.mpy \
 	stat/stat.mpy \
 	statistics/statistics.mpy \
 	string/string.mpy \
 	stringprep/stringprep.mpy \
 	struct/struct.mpy \
 	subprocess/subprocess.mpy \
+	sys/setup.mpy \
+	sys/sys.mpy \
 	tarfile/tarfile.mpy \
 	telnetlib/telnetlib.mpy \
 	tempfile/tempfile.mpy \
@@ -149,11 +170,25 @@ mpy_files = \
 	traceback/traceback.mpy \
 	tty/tty.mpy \
 	types/types.mpy \
-	uasyncio/uasyncio/__init__.mpy \
+	typing/setup.mpy \
+	typing/typing.mpy \
+	uaiohttpclient/README \
+	uaiohttpclient/setup.mpy \
+	uaiohttpclient/uaiohttpclient.mpy \
 	uasyncio.core/uasyncio/core.mpy \
 	uasyncio.queues/uasyncio/queues.mpy \
+	uasyncio.synchro/setup.mpy \
+	uasyncio.synchro/uasyncio/synchro.mpy \
+	uasyncio.udp/setup.mpy \
+	uasyncio.udp/uasyncio/udp.mpy \
+	uasyncio.websocket.server/setup.mpy \
+	uasyncio.websocket.server/uasyncio/websocket/server.mpy \
+	uasyncio/README.rst \
+	uasyncio/uasyncio/__init__.mpy \
 	ucontextlib/ucontextlib.mpy \
 	ucurses/ucurses/__init__.mpy \
+	udnspkt/setup.mpy \
+	udnspkt/udnspkt.mpy \
 	umqtt.robust/umqtt/robust.mpy \
 	umqtt.simple/umqtt/simple.mpy \
 	unicodedata/unicodedata.mpy \
@@ -162,17 +197,21 @@ mpy_files = \
 	upip/upip.mpy \
 	upysh/upysh.mpy \
 	urequests/urequests.mpy \
-	urllib/urllib.mpy \
-	urllib/urllib.mpy \
 	urllib.parse/urllib/parse.mpy \
 	urllib.urequest/urllib/urequest.mpy \
+	urllib/urllib.mpy \
+	urllib/urllib.mpy \
 	utarfile/utarfile.mpy \
 	uu/uu.mpy \
 	uuid/uuid.mpy \
+	venv/setup.mpy \
+	venv/venv.mpy \
 	warnings/warnings.mpy \
 	weakref/weakref.mpy \
 	xmltok/xmltok.mpy \
-	zipfile/zipfile.mpy
+	zipfile/zipfile.mpy \
+	zlib/setup.mpy \
+	zlib/zlib.mpy
 
 %:
 	dh $@

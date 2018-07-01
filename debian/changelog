@@ -1,3 +1,9 @@
+micropython-lib (1.9.3.git0.f20d89c.ev3dev1) stable; urgency=medium
+
+  * merge upstream/master 
+
+ -- David Lechner <david@lechnology.com>  Sun, 01 Jul 2018 11:56:35 -0500
+
 micropython-lib (1.9ev3dev3) testing; urgency=medium
 
   * Fix extra /usr/lib/micropython/micropython-lib directory in binary package
