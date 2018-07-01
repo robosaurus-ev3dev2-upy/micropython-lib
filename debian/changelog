@@ -1,3 +1,9 @@
+micropython-lib (1.9.3.git0.f20d89c.ev3dev2) stable; urgency=medium
+
+  * debian: don't compile setup.py
+
+ -- David Lechner <david@lechnology.com>  Sun, 01 Jul 2018 15:51:53 -0500
+
 micropython-lib (1.9.3.git0.f20d89c.ev3dev1) stable; urgency=medium
 
   * merge upstream/master 
