@@ -11,7 +11,6 @@ mpy_files = \
 	_markupbase/_markupbase.mpy \
 	abc/abc.mpy \
 	argparse/argparse.mpy \
-	array/setup.mpy \
 	base64/base64.mpy \
 	binascii/binascii.mpy \
 	binhex/binhex.mpy \
@@ -20,11 +19,8 @@ mpy_files = \
 	cgi/cgi.mpy \
 	cmd/cmd.mpy \
 	code/code.mpy \
-	code/setup.mpy \
 	codecs/codecs.mpy \
-	codecs/setup.mpy \
 	codeop/codeop.mpy \
-	codeop/setup.mpy \
 	collections.defaultdict/collections/defaultdict.mpy \
 	collections.deque/collections/deque.mpy \
 	collections/collections/__init__.mpy \
@@ -38,8 +34,6 @@ mpy_files = \
 	dbm/dbm.mpy \
 	decimal/decimal.mpy \
 	difflib/difflib.mpy \
-	dis/setup.mpy \
-	dummy_threading/setup.mpy \
 	email.charset/email/charset.mpy \
 	email.encoders/email/base64mime.mpy \
 	email.encoders/email/encoders.mpy \
@@ -82,7 +76,6 @@ mpy_files = \
 	imaplib/imaplib.mpy \
 	imp/imp.mpy \
 	importlib/importlib.mpy \
-	importlib/setup.mpy \
 	inspect/inspect.mpy \
 	io/io.mpy \
 	ipaddress/ipaddress.mpy \
@@ -101,7 +94,6 @@ mpy_files = \
 	machine/machine/timer.mpy \
 	mailbox/mailbox.mpy \
 	mailcap/mailcap.mpy \
-	math/setup.mpy \
 	mimetypes/mimetypes.mpy \
 	multiprocessing/multiprocessing.mpy \
 	nntplib/nntplib.mpy \
@@ -123,7 +115,6 @@ mpy_files = \
 	profile/profile.mpy \
 	pty/pty.mpy \
 	pwd/pwd.mpy \
-	pwd/setup.mpy \
 	pyb/pyb.mpy \
 	pystone_lowmem/pystone_lowmem.mpy \
 	pystone/pystone.mpy \
@@ -132,7 +123,6 @@ mpy_files = \
 	random/random.mpy \
 	re-pcre/re.mpy \
 	readline/readline.mpy \
-	readline/setup.mpy \
 	reprlib/reprlib.mpy \
 	runpy/runpy.mpy \
 	sched/sched.mpy \
@@ -147,7 +137,6 @@ mpy_files = \
 	socket/socket.mpy \
 	socketserver/socketserver.mpy \
 	sqlite3/sqlite3.mpy \
-	ssl/setup.mpy \
 	ssl/ssl.mpy \
 	stat/stat.mpy \
 	statistics/statistics.mpy \
@@ -155,7 +144,6 @@ mpy_files = \
 	stringprep/stringprep.mpy \
 	struct/struct.mpy \
 	subprocess/subprocess.mpy \
-	sys/setup.mpy \
 	sys/sys.mpy \
 	tarfile/tarfile.mpy \
 	telnetlib/telnetlib.mpy \
@@ -170,24 +158,18 @@ mpy_files = \
 	traceback/traceback.mpy \
 	tty/tty.mpy \
 	types/types.mpy \
-	typing/setup.mpy \
 	typing/typing.mpy \
 	uaiohttpclient/README \
-	uaiohttpclient/setup.mpy \
 	uaiohttpclient/uaiohttpclient.mpy \
 	uasyncio.core/uasyncio/core.mpy \
 	uasyncio.queues/uasyncio/queues.mpy \
-	uasyncio.synchro/setup.mpy \
 	uasyncio.synchro/uasyncio/synchro.mpy \
-	uasyncio.udp/setup.mpy \
 	uasyncio.udp/uasyncio/udp.mpy \
-	uasyncio.websocket.server/setup.mpy \
 	uasyncio.websocket.server/uasyncio/websocket/server.mpy \
 	uasyncio/README.rst \
 	uasyncio/uasyncio/__init__.mpy \
 	ucontextlib/ucontextlib.mpy \
 	ucurses/ucurses/__init__.mpy \
-	udnspkt/setup.mpy \
 	udnspkt/udnspkt.mpy \
 	umqtt.robust/umqtt/robust.mpy \
 	umqtt.simple/umqtt/simple.mpy \
@@ -204,13 +186,11 @@ mpy_files = \
 	utarfile/utarfile.mpy \
 	uu/uu.mpy \
 	uuid/uuid.mpy \
-	venv/setup.mpy \
 	venv/venv.mpy \
 	warnings/warnings.mpy \
 	weakref/weakref.mpy \
 	xmltok/xmltok.mpy \
 	zipfile/zipfile.mpy \
-	zlib/setup.mpy \
 	zlib/zlib.mpy
 
 %:
