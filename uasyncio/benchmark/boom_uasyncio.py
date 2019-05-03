@@ -26,7 +26,7 @@ def validate(resp):
     if cnt == NUM_REQS:
         seen.sort()
         print
-        print seen
+        print(seen)
         print
         el = None
         for i in seen:
