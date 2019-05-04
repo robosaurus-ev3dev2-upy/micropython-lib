@@ -103,3 +103,31 @@ def epoll(sizehint=4):
     fd = epoll_create(sizehint)
     os.check_error(fd)
     return Epoll(fd)
+
+def select(rfds, wfds, xfds):
+    epfd = epoll_create(len(rfds) + len(wfds) + len(xfds))
+    os.check_error(epfd)
+    ep = Epoll(epfd)
+
+    for fd in rfds:
+        ep.register(fd, EPOLLIN)
+    for fd in wfds:
+        ep.register(fd, EPOLLOUT)
+    for fd in xfds:
+        ep.register(fd, EPOLLPRI)
+
+    ret = ep.poll()
+
+    r = []
+    w = []
+    x = []
+    for (fd, event) in ret:
+        if (0 != (EPOLLIN & event)):
+            r.append(fd)
+        if (0 != (EPOLLOUT & event)):
+            w.append(fd)
+        if (0 != (EPOLLPRI & event)):
+            x.append(fd)
+    
+    ep.close()
+    return r, w, x
