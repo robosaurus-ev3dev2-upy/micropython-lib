@@ -28,6 +28,7 @@ curdir = "."
 pardir = ".."
 environ = {"WARNING": "NOT_IMPLEMENTED"}
 
+devnull = "/dev/null"
 
 libc = ffilib.libc()
 

@@ -1,7 +1,7 @@
 import ffi
 import os
 import ffilib
-
+import io
 
 libc = ffilib.libc()
 
@@ -31,7 +31,10 @@ def ioctl(fd, op, arg=0, mut=False):
         return r
     else:
         # TODO
-        assert mut
-        r = ioctl_s(fd, op, arg)
+        #assert mut
+        import uctypes
+        if type(fd) is io.FileIO:
+            fd = fd.fileno()
+        r = ioctl_s(fd, op, uctypes.addressof(arg))
         os.check_error(r)
         return r
