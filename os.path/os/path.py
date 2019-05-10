@@ -52,6 +52,14 @@ def isdir(path):
     except OSError:
         return False
 
+def isfile(path):
+    import stat
+    try:
+        mode = os.stat(path)[0]
+        return stat.S_ISREG(mode)
+    except OSError:
+        return False
+
 
 def expanduser(s):
     if s == "~" or s.startswith("~/"):

@@ -913,6 +913,9 @@ class tzinfo:
 
     Subclasses must override the name(), utcoffset() and dst() methods.
     """
+    def __new__(cls):
+        return super(tzinfo, cls).__new__(cls)
+
     __slots__ = ()
     def tzname(self, dt):
         "datetime -> string name of time zone."
